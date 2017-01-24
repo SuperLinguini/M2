@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+jar {
+    manifest {
+        attributes  'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain', 
+                    'Class-Path' : 'lib/resources.jar'
+                }
+    destinationDir = file(".")
+    archiveName = 'whe47.jar'
+}
+
+dependencies {
+    compile files('lib/resources.jar')
+    runtime files('lib/resources.jar')
+}
