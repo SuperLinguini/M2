@@ -1,0 +1,18 @@
+apply plugin: 'java'
+    compileJava {
+        sourceCompatibility = '1.8'
+    }
+
+jar {
+    manifest {
+        attributes  'Main-Class' : 'edu.gatech.oad.antlab.pkg1.AntLabMain', 
+                    'Class-Path' : 'lib/resources.jar'
+                }
+    destinationDir = file(".")
+    archiveName = 'bcai7.jar'
+}
+
+
+dependencies {
+    compile files('lib/resources.jar')
+}
