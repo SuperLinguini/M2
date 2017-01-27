@@ -30,8 +30,16 @@ public class Person1 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
+        String twoLetters;
+        String result;
 	  //Person 1 put your implementation here
-	  return null;
+        if (input.length() < 3) {
+            return name;
+        } else {
+            twoLetters = input.substring(0,2);
+            result = input.substring(2,input.length()) + twoLetters;
+            return result;
+        }
 	}
 	
 	/**
