@@ -8,6 +8,8 @@ package edu.gatech.oad.antlab.person;
  * @author Bob
  * @version 1.1
  */
+import java.util.ArrayList;
+import java.util.Random;
 public class Person2 {
     /** Holds the persons real name */
     private String name;
@@ -31,7 +33,17 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+      Random random = new Random();
+      ArrayList<Integer> uniqueIndicies = new ArrayList<Integer>();
+      String randomized = "";
+      while(randomized.length() < input.length()) {
+        int randIndex = random.nextInt(input.length());
+        if(!uniqueIndicies.contains(randIndex)){
+          randomized += input.charAt(randIndex);
+          uniqueIndicies.add(randIndex);
+        }
+      }
+      return randomized;
 	}
 	/**
 	 * Return a string rep of this object
