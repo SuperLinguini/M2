@@ -15,3 +15,7 @@ jar {
     archiveName = 'ksaravanan3.jar'
 }
 
+clean {
+    delete 'ksaravanan3.jar'
+}
+
