@@ -16,3 +16,8 @@ jar {
 dependencies {
     compile files('lib/resources.jar')
 }
+
+
+clean {
+    delete 'bcai7.jar'
+}
